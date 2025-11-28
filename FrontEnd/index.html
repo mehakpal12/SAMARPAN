@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samarpan Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">
+          <span class="brand-logo">S</span>
+          <span class="brand-text">Samarpan</span>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle">
+          ☰
+        </button>
+      </div>
+
+      <div class="user-box">
+        <div class="user-avatar">A</div>
+        <div class="user-meta">
+          <span class="user-name">Aman</span>
+          <span class="user-role">Host</span>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <button class="side-link active" data-view="dashboard">
+          <span>Dashboard</span>
+        </button>
+        <button class="side-link" data-view="create">
+          <span>Create Quiz</span>
+        </button>
+        <button class="side-link" data-view="leaderboard">
+          <span>Leaderboard</span>
+        </button>
+        <button class="side-link" data-view="explore">
+          <span>Explore</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- ========== MAIN AREA ========== -->
+    <main class="main">
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div class="top-links">
+          <button class="top-link" data-view="contact">Contact us</button>
+          <button class="top-link" data-view="about">About</button>
+        </div>
+        <div class="top-actions">
+          <button class="top-btn" data-view="host">Host quiz</button>
+          <button class="top-btn top-btn-ghost" data-view="auth">Sign up / Log in</button>
+          <div class="top-profile" data-view="profile">A</div>
+        </div>
+      </header>
+
+      <!-- LATEST UPDATES STRIP -->
+      <section class="updates-strip">
+        <h2>Latest updates</h2>
+        <div class="updates-items">
+          <span>🔥 New: AI quiz generator added for PDFs</span>
+          <span>🏆 Live coding tournament scheduled for Friday</span>
+          <span>✨ Dynamic rating & ranking system now live</span>
+        </div>
+      </section>
+
+      <!-- ========= VIEWS ========= -->
+
+      <!-- DASHBOARD VIEW (HOME) -->
+      <section class="view view-active" id="view-dashboard">
+        <div class="view-header">
+          <h2>Dashboard</h2>
+          <p>Your quick overview of tools, recent quizzes, rating and activity.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- LEFT: TOOLBAR -->
+          <div class="card toolbar-card">
+            <h3>Toolbar</h3>
+            <ul class="toolbar-list">
+              <li>
+                <span class="tool-title">Create quiz</span>
+                <span class="tool-sub">Build your own questions</span>
+              </li>
+              <li>
+                <span class="tool-title">Create quiz (AI)</span>
+                <span class="tool-sub">Upload notes / PDFs, let AI do the work</span>
+              </li>
+              <li>
+                <span class="tool-title">Live tournaments</span>
+                <span class="tool-sub">Host multi-round events</span>
+              </li>
+              <li>
+                <span class="tool-title">Learn</span>
+                <span class="tool-sub">View guides, tips & best practices</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RIGHT: QUIZ CARDS + RATING SUMMARY -->
+          <div class="card history-card">
+            <div class="history-head">
+              <h3>Your quizzes / history</h3>
+              <button class="chip small-chip">View all</button>
+            </div>
+
+            <div class="quiz-grid">
+              <div class="quiz-card">
+                <h4>Thermodynamics Basics</h4>
+                <p>10 questions • AI-generated</p>
+                <div class="quiz-meta">
+                  <span>Last played: 2d ago</span>
+                  <button class="mini-btn">Host again</button>
+                </div>
+              </div>
+
+              <div class="quiz-card">
+                <h4>Data Structures MCQ Set</h4>
+                <p>20 questions • Manual</p>
+                <div class="quiz-meta">
+                  <span>Last played: 5d ago</span>
+                  <button class="mini-btn">Host again</button>
+                </div>
+              </div>
+
+              <div class="quiz-card">
+                <h4>General Aptitude Round 1</h4>
+                <p>15 questions • Tournament</p>
+                <div class="quiz-meta">
+                  <span>Last played: 1w ago</span>
+                  <button class="mini-btn">Host again</button>
+                </div>
+              </div>
+
+              <div class="quiz-card">
+                <h4>Operating Systems Quick Test</h4>
+                <p>8 questions • AI-generated</p>
+                <div class="quiz-meta">
+                  <span>Last played: 3w ago</span>
+                  <button class="mini-btn">Host again</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- small rating summary inside dashboard -->
+            <div class="inline-rating">
+              <div>
+                <span class="inline-label">Current rating</span>
+                <span class="inline-value">1430</span>
+              </div>
+              <div class="inline-bar">
+                <div class="inline-fill"></div>
+              </div>
+              <span class="inline-note">+24 after last 3 quizzes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- extra: stats row -->
+        <div class="stats-row">
+          <div class="card stat-card">
+            <h4>Total quizzes hosted</h4>
+            <p class="stat-number">42</p>
+            <p class="stat-sub">Across classrooms, labs & events.</p>
+          </div>
+          <div class="card stat-card">
+            <h4>Unique players</h4>
+            <p class="stat-number">196</p>
+            <p class="stat-sub">Different students joined your sessions.</p>
+          </div>
+          <div class="card stat-card">
+            <h4>Avg accuracy</h4>
+            <p class="stat-number">81%</p>
+            <p class="stat-sub">Overall performance across quizzes.</p>
+          </div>
+        </div>
+
+        <!-- extra: recent activity list -->
+        <div class="card activity-card">
+          <div class="activity-head">
+            <h3>Recent activity</h3>
+          </div>
+          <ul class="activity-list">
+            <li><span class="dot dot-green"></span> You hosted “Thermodynamics Basics” – 32 players joined.</li>
+            <li><span class="dot dot-blue"></span> New AI quiz generated from “DSA Notes – Stack & Queue”.</li>
+            <li><span class="dot dot-purple"></span> Leaderboard updated after “Aptitude Round 1”.</li>
+            <li><span class="dot dot-yellow"></span> 14 students completed practice mode for “Pointers in C”.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CREATE QUIZ VIEW -->
+      <section class="view" id="view-create">
+        <div class="view-header">
+          <h2>Create quiz</h2>
+          <p>Choose how you want to build your next quiz.</p>
+        </div>
+
+        <div class="grid-two">
+          <div class="card create-card">
+            <h3>Start from scratch</h3>
+            <p>
+              Add questions manually, control every option, and save as a reusable quiz template.
+            </p>
+            <ul class="small-list">
+              <li>Multiple choice, true/false, single answer</li>
+              <li>Control timer & points per question</li>
+              <li>Tag quizzes by topic and level</li>
+            </ul>
+            <button class="btn btn-primary">Open manual editor</button>
+          </div>
+
+          <div class="card create-card">
+            <h3>Use AI from notes / PDFs</h3>
+            <p>
+              Upload your study material and let Samarpan generate a full quiz for you.
+            </p>
+            <ul class="small-list">
+              <li>Supports PDF, text, and copy-pasted content</li>
+              <li>Configurable difficulty and number of questions</li>
+              <li>Edit AI questions before saving</li>
+            </ul>
+            <button class="btn btn-outline">Upload file & generate</button>
+          </div>
+        </div>
+
+        <!-- extra templates row -->
+        <div class="templates-row">
+          <h3 class="section-subtitle">Quick templates</h3>
+          <div class="templates-grid">
+            <div class="card template-card">
+              <h4>5-question warmup</h4>
+              <p>Use before starting any topic to quickly check basics.</p>
+              <button class="mini-btn">Use template</button>
+            </div>
+            <div class="card template-card">
+              <h4>Timed mock test</h4>
+              <p>20 questions with strict timer for exam-style practice.</p>
+              <button class="mini-btn">Use template</button>
+            </div>
+            <div class="card template-card">
+              <h4>Tournament round</h4>
+              <p>Ideal for events with multiple knock-out rounds.</p>
+              <button class="mini-btn">Use template</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- extra tips box -->
+        <div class="card tips-card">
+          <h3>Tips for better quizzes</h3>
+          <ul class="small-list">
+            <li>Keep options short and clear – avoid confusing wording.</li>
+            <li>Mix easy, medium and hard questions to keep players engaged.</li>
+            <li>Use AI to generate a first draft, then tweak to match your style.</li>
+            <li>Add a short explanation after tough questions for learning impact.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- LEADERBOARD VIEW -->
+      <section class="view" id="view-leaderboard">
+        <div class="view-header">
+          <h2>Leaderboard & ratings</h2>
+          <p>See who’s dominating your quizzes and how ratings are evolving.</p>
+        </div>
+
+        <div class="card">
+          <div class="leaderboard-filters">
+            <button class="chip chip-active">This week</button>
+            <button class="chip">This month</button>
+            <button class="chip">All-time</button>
+          </div>
+
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Rating</th>
+                <th>Quizzes played</th>
+                <th>Avg score</th>
+                <th>Best rank</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Aman</td>
+                <td>1430</td>
+                <td>18</td>
+                <td>92%</td>
+                <td>🥇</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Mehak</td>
+                <td>1390</td>
+                <td>15</td>
+                <td>89%</td>
+                <td>🥈</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Janvi</td>
+                <td>1365</td>
+                <td>12</td>
+                <td>87%</td>
+                <td>🥉</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Sumit</td>
+                <td>1310</td>
+                <td>9</td>
+                <td>81%</td>
+                <td>Top 5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- rating explanation row -->
+        <div class="leaderboard-extra">
+          <div class="card lb-card">
+            <h3>How ratings work (chess-style)</h3>
+            <ul class="small-list">
+              <li>Each player starts around 1200 rating.</li>
+              <li>Win vs higher-rated player → bigger rating gain.</li>
+              <li>Win vs lower-rated player → smaller gain.</li>
+              <li>Lose vs lower-rated player → bigger rating loss.</li>
+              <li>Draw / close scores → small adjustments both sides.</li>
+            </ul>
+            <p class="rating-note">
+              Behind the scenes, an Elo-like formula updates rating based on opponent strength,
+              quiz difficulty, and final score—similar to chess.com rating behaviour. :contentReference[oaicite:0]{index=0}
+            </p>
+          </div>
+          <div class="card lb-card">
+            <h3>Mode-based ratings</h3>
+            <ul class="small-list">
+              <li><strong>Quiz (Rapid)</strong> – standard class quizzes.</li>
+              <li><strong>Tournament (Blitz)</strong> – fast-paced event games.</li>
+              <li><strong>Practice (Casual)</strong> – practice mode, rating optional.</li>
+            </ul>
+            <p class="rating-note">
+              Just like chess.com has Rapid / Blitz / Bullet, Samarpan can track separate
+              ratings per mode, plus a global rating for ranking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPLORE VIEW -->
+      <section class="view" id="view-explore">
+        <div class="view-header">
+          <h2>Explore quizzes & tournaments</h2>
+          <p>Browse public quizzes or join upcoming live events.</p>
+        </div>
+
+        <div class="explore-grid">
+          <div class="card explore-card">
+            <h3>Trending quizzes</h3>
+            <ul class="small-list">
+              <li>Intro to DBMS • 24 hosts today</li>
+              <li>C Programming Basics • 19 hosts</li>
+              <li>Verbal Ability Warmup • 15 hosts</li>
+            </ul>
+          </div>
+
+          <div class="card explore-card">
+            <h3>Upcoming tournaments</h3>
+            <ul class="small-list">
+              <li>Friday Night CS Quiz • 8 PM</li>
+              <li>General Aptitude Clash • Tomorrow</li>
+              <li>Python Basics Sprint • Sunday</li>
+            </ul>
+          </div>
+
+          <div class="card explore-card">
+            <h3>Learn & improve</h3>
+            <ul class="small-list">
+              <li>How to write good MCQs</li>
+              <li>Tips for hosting fair tournaments</li>
+              <li>Using AI safely for question generation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- categories row -->
+        <div class="categories-block">
+          <h3 class="section-subtitle">Browse by category</h3>
+          <div class="category-chips">
+            <button class="chip chip-active">Computer Science</button>
+            <button class="chip">Aptitude</button>
+            <button class="chip">Gate / JEE</button>
+            <button class="chip">Maths</button>
+            <button class="chip">General Knowledge</button>
+          </div>
+
+          <div class="category-grid">
+            <div class="card cat-card">
+              <h4>Beginner CS Pack</h4>
+              <p>3 quizzes • C basics, loops, arrays.</p>
+            </div>
+            <div class="card cat-card">
+              <h4>Placement Aptitude Set</h4>
+              <p>4 quizzes • numbers, reasoning, puzzles.</p>
+            </div>
+            <div class="card cat-card">
+              <h4>DBMS + SQL Combo</h4>
+              <p>3 quizzes • ER, normalization, queries.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFILE VIEW (rating detail like chess.com profile) -->
+      <section class="view" id="view-profile">
+        <div class="view-header">
+          <h2>Profile & rating</h2>
+          <p>Your rating, progress and recent performance across modes.</p>
+        </div>
+
+        <div class="profile-grid">
+          <div class="card profile-main">
+            <div class="profile-header">
+              <div class="profile-avatar">A</div>
+              <div>
+                <h3>Aman Maurya</h3>
+                <p class="profile-sub">Host • Team Samarpan</p>
+              </div>
+            </div>
+
+            <div class="rating-row">
+              <div class="rating-block">
+                <span class="rating-label">Global rating</span>
+                <span class="rating-value">1430</span>
+                <span class="rating-change">+15 today</span>
+              </div>
+              <div class="rating-block">
+                <span class="rating-label">Peak rating</span>
+                <span class="rating-value">1475</span>
+                <span class="rating-change">Reached last week</span>
+              </div>
+              <div class="rating-block">
+                <span class="rating-label">Games played</span>
+                <span class="rating-value">58</span>
+                <span class="rating-change">42 rated • 16 casual</span>
+              </div>
+            </div>
+
+            <div class="rating-bar-wrapper">
+              <span class="rating-label">Progress to next tier (Gold → Platinum)</span>
+              <div class="rating-progress">
+                <div class="rating-progress-fill"></div>
+              </div>
+              <span class="rating-note">Win 4–5 more rated quizzes to reach the next tier.</span>
+            </div>
+          </div>
+
+          <div class="card profile-modes">
+            <h3>Mode-wise ratings</h3>
+            <div class="mode-list">
+              <div class="mode-item">
+                <div>
+                  <strong>Quiz (Rapid)</strong>
+                  <span class="mode-sub">Standard classroom & lab games</span>
+                </div>
+                <span class="mode-rating">1420</span>
+              </div>
+              <div class="mode-item">
+                <div>
+                  <strong>Tournament (Blitz)</strong>
+                  <span class="mode-sub">Fast event rounds & college fests</span>
+                </div>
+                <span class="mode-rating">1485</span>
+              </div>
+              <div class="mode-item">
+                <div>
+                  <strong>Practice (Casual)</strong>
+                  <span class="mode-sub">Solo practice, rating optional</span>
+                </div>
+                <span class="mode-rating">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card profile-history">
+            <h3>Recent rated quizzes</h3>
+            <ul class="history-list">
+              <li>
+                <span>Thermodynamics Basics</span>
+                <span class="history-result win">Win</span>
+                <span class="history-change">+8 (1422 → 1430)</span>
+              </li>
+              <li>
+                <span>OS Quick Battle</span>
+                <span class="history-result loss">Loss</span>
+                <span class="history-change">-6 (1428 → 1422)</span>
+              </li>
+              <li>
+                <span>DSA Stack & Queue</span>
+                <span class="history-result win">Win</span>
+                <span class="history-change">+10 (1418 → 1428)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOST VIEW -->
+      <section class="view" id="view-host">
+        <div class="view-header">
+          <h2>Host a quiz</h2>
+          <p>Pick a quiz, set mode and start a rated session.</p>
+        </div>
+
+        <div class="host-grid">
+          <div class="card host-form">
+            <div class="field">
+              <label for="host-quiz">Select quiz</label>
+              <select id="host-quiz">
+                <option>Thermodynamics Basics</option>
+                <option>Data Structures MCQ Set</option>
+                <option>General Aptitude Round 1</option>
+                <option>Operating Systems Quick Test</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="host-mode">Mode</label>
+              <select id="host-mode">
+                <option>Quiz (Rapid)</option>
+                <option>Tournament (Blitz)</option>
+                <option>Practice (Casual – unrated)</option>
+              </select>
+            </div>
+
+            <div class="field inline-field">
+              <div>
+                <label for="host-timer">Timer per question</label>
+                <input type="number" id="host-timer" value="30" />
+              </div>
+              <div>
+                <label for="host-rating">Rated session</label>
+                <select id="host-rating">
+                  <option>Yes, update ratings</option>
+                  <option>No, casual only</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="btn btn-primary full-width">Generate game PIN & start</button>
+            <p class="form-note">
+              For rated sessions, your rating will increase or decrease based on players’
+              scores and average rating—similar to chess-style matchmaking.
+            </p>
+          </div>
+
+          <div class="card host-side">
+            <h3>Expected rating impact</h3>
+            <ul class="small-list">
+              <li>Win vs higher-rated group → +10 to +18 rating.</li>
+              <li>Win vs similar rating → +6 to +10 rating.</li>
+              <li>Win vs much lower rating → +1 to +4 rating.</li>
+              <li>Loss vs lower-rated group → -10 to -18 rating.</li>
+            </ul>
+            <p class="rating-note">
+              The system uses a dynamic rating & ranking model described in your PPT
+              (XP, badges, levels + AI-powered analytics). :contentReference[oaicite:1]{index=1}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUTH VIEW -->
+      <section class="view" id="view-auth">
+        <div class="view-header">
+          <h2>Sign up / Log in</h2>
+          <p>Access your quizzes, ratings, and tournaments from any device.</p>
+        </div>
+
+        <div class="auth-grid">
+          <form class="card auth-card">
+            <h3>Log in</h3>
+            <div class="field">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="login-pass">Password</label>
+              <input type="password" id="login-pass" placeholder="••••••••" />
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Log in</button>
+            <p class="form-note">Demo only – no real authentication.</p>
+          </form>
+
+          <form class="card auth-card">
+            <h3>Sign up</h3>
+            <div class="field">
+              <label for="signup-name">Name</label>
+              <input type="text" id="signup-name" placeholder="Aman Maurya" />
+            </div>
+            <div class="field">
+              <label for="signup-email">Email</label>
+              <input type="email" id="signup-email" placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="signup-pass">Password</label>
+              <input type="password" id="signup-pass" placeholder="Create a password" />
+            </div>
+            <button type="submit" class="btn btn-outline full-width">Create account</button>
+            <p class="form-note">
+              Your rating, history, and quizzes will be tied to this account.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- CONTACT VIEW -->
+      <section class="view" id="view-contact">
+        <div class="view-header">
+          <h2>Contact us</h2>
+          <p>Reach out for collaborations, feedback, or event hosting.</p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="card contact-form">
+            <div class="field">
+              <label for="c-name">Name</label>
+              <input type="text" id="c-name" placeholder="Your full name" />
+            </div>
+            <div class="field">
+              <label for="c-email">Email</label>
+              <input type="email" id="c-email" placeholder="you@institute.com" />
+            </div>
+            <div class="field">
+              <label for="c-type">I want to</label>
+              <select id="c-type">
+                <option>Host a college event</option>
+                <option>Try in my classroom</option>
+                <option>Give feedback</option>
+                <option>Discuss collaboration</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c-msg">Message</label>
+              <textarea id="c-msg" rows="4" placeholder="Tell us about your idea or event..."></textarea>
+            </div>
+            <button class="btn btn-primary full-width" type="submit">Send message</button>
+            <p class="form-note">Prototype form – data is not actually sent.</p>
+          </form>
+
+          <div class="card contact-info">
+            <h3>Team Samarpan</h3>
+            <p class="contact-text">
+              Student-led project from UIET, CSJMU Kanpur under Smart Education theme.
+            </p>
+            <ul class="small-list">
+              <li>Use Samarpan for quizzes, tournaments, and practice sessions.</li>
+              <li>AI-generated questions from PDFs, notes, and topics.</li>
+              <li>Dynamic rating, XP, and badges to keep students engaged.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT VIEW -->
+      <section class="view" id="view-about">
+        <div class="view-header">
+          <h2>About Samarpan</h2>
+          <p>
+            AI-powered quiz portal by Team Samarpan – designed as an upgrade over
+            Kahoot-style platforms with automation, analytics, and rating. :contentReference[oaicite:2]{index=2}
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card about-card">
+            <h3>Project overview</h3>
+            <p class="about-text">
+              Samarpan is an AI Quiz Portal built for the Smart Education theme. It
+              auto-generates quizzes from text/PDFs, supports multiplayer modes, and
+              tracks ratings, ranks, and performance over time. :contentReference[oaicite:3]{index=3}
+            </p>
+            <ul class="small-list">
+              <li>AI quiz generation from study material.</li>
+              <li>Live scoring, leaderboards and tournaments.</li>
+              <li>Dynamic rating & ranking system with XP and levels. :contentReference[oaicite:4]{index=4}</li>
+            </ul>
+          </div>
+
+          <div class="card about-card">
+            <h3>Tech stack</h3>
+            <ul class="small-list">
+              <li>Frontend: React SPA / HTML / CSS animated UI.</li>
+              <li>Backend: Node.js + Express REST API.</li>
+              <li>Realtime: Socket.io for live rooms & scores.</li>
+              <li>AI Service: Python microservice with OpenAI / NLP models.</li>
+              <li>Database: MongoDB Atlas for users, quizzes & leaderboards. :contentReference[oaicite:5]{index=5}</li>
+            </ul>
+          </div>
+
+          <div class="card about-card">
+            <h3>Team Samarpan</h3>
+            <ul class="small-list">
+              <li>Mehak Pal – Team Lead & Full Stack Developer.</li>
+              <li>Janvi Sahu – AI / ML Expert.</li>
+              <li>Sumit Kumar – UI/UX & Frontend Designer.</li>
+              <li>Maurya Aman – Data & Content Manager (rating system, tournaments). :contentReference[oaicite:6]{index=6}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
