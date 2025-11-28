@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samarpan – AI Quiz Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">Samarpan</span>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero">Home</a>
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#features">Features</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost">Sign in</button>
+        <button class="btn btn-primary">Try Demo</button>
+        <button class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="badge">Smart Education • Team Samarpan • Upsk-250371</div>
+        
+        <h1>Samarpan – AI Quiz Portal for Smart, Multiplayer Learning.</h1>
+        <p>
+          An AI-powered quiz platform that auto-generates questions from PDFs and notes,
+          enables real-time multiplayer battles, and gives data-driven insights to
+          learners, teachers, and institutes.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary">Start Free Session</button>
+          <button class="btn btn-ghost">Watch Demo</button>
+        </div>
+
+        <div class="hero-metrics">
+          <div>
+            <h3>AI Auto-Quiz</h3>
+            <p>Instant MCQs from text & PDFs</p>
+          </div>
+          <div>
+            <h3>Multiplayer</h3>
+            <p>Solo, Duo, Team Battles</p>
+          </div>
+          <div>
+            <h3>Smart Analytics</h3>
+            <p>Speed, accuracy & ranking</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glass-card main-metric">
+          <h4>Live Quiz Room – #SAM_204</h4>
+          <p>Players online: <span class="status">128</span></p>
+          <div class="pill-row">
+            <span class="pill">AI Quiz Mode</span>
+            <span class="pill">Global Leaderboard</span>
+          </div>
+          <div class="chart-placeholder">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+            <div class="bar bar-4"></div>
+            <div class="bar bar-5"></div>
+          </div>
+        </div>
+
+        <div class="glass-card side-card">
+          <h5>Realtime Stats</h5>
+          <ul>
+            <li><span class="dot online"></span> Rooms live – 24</li>
+            <li><span class="dot"></span> Avg accuracy – 78%</li>
+            <li><span class="dot"></span> Active institutes – 12</li>
+          </ul>
+        </div>
+
+        <div class="floating-tag tag-1">AI Quiz Generation</div>
+        <div class="floating-tag tag-2">Team Battles & Tournaments</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROBLEM ================= -->
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="section-header">
+        <h2>The problem with current quiz platforms</h2>
+        <p>
+          In today’s digital era, quizzes are powerful tools for interactive learning—
+          but most platforms are still manual, static, and non-intelligent.
+        </p>
+      </div>
+
+      <div class="grid three-col">
+        <div class="card info-card">
+          <h3>Manual Effort</h3>
+          <p>
+            Teachers spend hours creating, formatting, and uploading questions. Updating
+            quizzes for each batch or subject becomes a time-consuming task.
+          </p>
+        </div>
+        <div class="card info-card">
+          <h3>Limited Interactivity</h3>
+          <p>
+            Many tools lack real-time competition, live scores, and game-like elements
+            that keep learners engaged and excited during sessions.
+          </p>
+        </div>
+        <div class="card info-card">
+          <h3>No Automation or Insights</h3>
+          <p>
+            Question generation is manual, difficulty is static, and there are no
+            AI-powered analytics for accuracy, speed, or improvement areas.
+          </p>
+        </div>
+      </div>
+
+      <div class="problem-highlight card">
+        <p>
+          <strong>The real problem isn’t the lack of quiz tools — it’s the lack of
+          intelligent, automated, and interactive ones.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOLUTION ================= -->
+  <section class="section alt-section" id="solution">
+    <div class="container">
+      <div class="section-header">
+        <h2>Samarpan – our AI-powered solution</h2>
+        <p>
+          A unified, gaming-style quiz ecosystem that blends AI automation, real-time
+          competition, and deep analytics.
+        </p>
+      </div>
+
+      <div class="grid solution-grid">
+        <div class="card solution-card">
+          <h3>Unified AI Quiz Ecosystem</h3>
+          <p>
+            One platform that combines learning, competition, and analytics with smooth,
+            intuitive user experience for students, teachers, and organizations.
+          </p>
+        </div>
+        <div class="card solution-card">
+          <h3>AI Automation & Difficulty</h3>
+          <p>
+            Automatically generates quizzes from text or PDFs and adapts question
+            difficulty based on learner performance for continuous growth.
+          </p>
+        </div>
+        <div class="card solution-card">
+          <h3>Competitive Learning</h3>
+          <p>
+            Real-time ranking, ratings, and game-like progression with XP, levels, and
+            badges to boost motivation and consistency.
+          </p>
+        </div>
+        <div class="card solution-card">
+          <h3>Multiplayer & Tournaments</h3>
+          <p>
+            Solo, duo, 2v2, 4v4 team battles, and daily/global tournaments with live
+            scores and reactions for maximum engagement.
+          </p>
+        </div>
+        <div class="card solution-card">
+          <h3>Smart Analytics</h3>
+          <p>
+            Tracks speed, accuracy, strengths, and mistakes using AI-powered dashboards
+            to help learners and mentors improve.
+          </p>
+        </div>
+        <div class="card solution-card">
+          <h3>Scalable Architecture</h3>
+          <p>
+            Microservice-based design with real-time engine and cloud-ready database,
+            built to handle many users, fields, and quiz sessions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARCHITECTURE ================= -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technical Architecture</h2>
+        <p>
+          Designed as a scalable, event-driven system with separate layers for UI,
+          backend, AI, real-time engine, and data. 
+        </p>
+      </div>
+
+      <div class="architecture-wrapper">
+        <div class="architecture-diagram card">
+          <h3>Stack Overview</h3>
+          <ul class="arch-list">
+            <li>
+              <span class="arch-label">Frontend (Client Layer)</span>
+              <span>React SPA + Tailwind + socket.io-client for live quiz rooms and admin panel.</span>
+            </li>
+            <li>
+              <span class="arch-label">Backend (Application Layer)</span>
+              <span>Node.js + Express REST API for quizzes, users, sessions, and validation pipeline.</span>
+            </li>
+            <li>
+              <span class="arch-label">Real-Time Engine</span>
+              <span>Socket.io WebSocket server for broadcasting questions, timers, and scores.</span>
+            </li>
+            <li>
+              <span class="arch-label">AI Microservice</span>
+              <span>Python service using OpenAI to convert PDFs/text into MCQs and adaptive quizzes.</span>
+            </li>
+            <li>
+              <span class="arch-label">Database Layer</span>
+              <span>MongoDB Atlas with collections for Users, Quizzes, Questions, Sessions, Leaderboards.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="architecture-side">
+          <div class="card small-card">
+            <h4>Key Tech</h4>
+            <p>React • Node.js • Express • Python • OpenAI • MongoDB • Socket.io</p>
+          </div>
+          <div class="card small-card">
+            <h4>Data Flow</h4>
+            <p>
+              Users join rooms → Backend orchestrates quiz flow → AI service generates questions →
+              Real-time engine pushes updates → Database stores results and analytics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section alt-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Innovative features that upgrade learning</h2>
+        <p>
+          Inspired by games, powered by AI – Samarpan turns quizzes into an addictive,
+          growth-focused experience.
+        </p>
+      </div>
+
+      <div class="grid features-grid">
+        <div class="card feature-card">
+          <div class="icon-circle">🎮</div>
+          <h3>Gaming-Style Interface</h3>
+          <p>
+            Vibrant visuals, animations, and live leaderboards that make quizzes feel
+            like tournaments, not tests.
+          </p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-circle">🤖</div>
+          <h3>AI Quiz Generation</h3>
+          <p>
+            Automatically generates unique quizzes from PDFs, notes, and topics with
+            domain-specific depth.
+          </p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-circle">⚡</div>
+          <h3>Live Scoring & Ranking</h3>
+          <p>
+            Instant updates after each question with dynamic global and room-wise
+            rankings.
+          </p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-circle">👥</div>
+          <h3>Multiplayer & Team Modes</h3>
+          <p>
+            Solo, duo, and team matches (2v2 / 4v4) with reactions and chat to create a
+            social learning vibe.
+          </p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-circle">📈</div>
+          <h3>AI Analytics Dashboard</h3>
+          <p>
+            Detailed analytics for accuracy, speed, topic mastery, and improvement
+            suggestions.
+          </p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-circle">🏅</div>
+          <h3>XP, Badges & Levels</h3>
+          <p>
+            Earn XP, unlock levels, and collect badges for consistency, accuracy, and
+            speed.
+          </p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-circle">🌐</div>
+          <h3>Global Tournaments</h3>
+          <p>
+            Host competitive and even paid tournaments with global rankings and rewards.
+          </p>
+        </div>
+        <div class="card feature-card">
+          <div class="icon-circle">🎙️</div>
+          <h3>Voice & Inclusive Modes</h3>
+          <p>
+            Optional voice-based answering and accessible UI to make learning more
+            inclusive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEASIBILITY & SCALABILITY ================= -->
+  <section class="section" id="feasibility">
+    <div class="container">
+      <div class="section-header">
+        <h2>Feasible today, scalable for tomorrow</h2>
+        <p>
+          Built on battle-tested technologies that can scale from classroom pilots
+          to global tournaments.
+        </p>
+      </div>
+
+      <div class="feasibility-grid">
+        <div class="card">
+          <h3>Feasibility</h3>
+          <ul class="bullet-list">
+            <li>React / HTML / CSS can deliver fast, animated, gaming-style UI.</li>
+            <li>Node.js backend handles real-time quiz logic, scoring & sessions.</li>
+            <li>MongoDB stores user data, scores, and AI-generated questions efficiently.</li>
+            <li>GPT-based / NLP models generate quizzes from text, PDFs, and topics.</li>
+            <li>Socket.io enables live multiplayer rooms and instant leaderboards.</li>
+            <li>JWT / OAuth keep authentication and data access secure.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Scalability</h3>
+          <ul class="bullet-list">
+            <li>Cloud platforms (AWS / GCP / Azure) can autoscale quiz traffic.</li>
+            <li>Microservice structure lets quiz, AI, auth, and leaderboard scale independently.</li>
+            <li>Cloud databases with replication & sharding handle large quiz volumes.</li>
+            <li>Load balancers & caching improve response time under heavy load.</li>
+            <li>Responsive, multilingual UI supports global audience across devices.</li>
+            <li>Monitoring tools keep the system stable during tournaments.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ROADMAP ================= -->
+  <section class="section alt-section" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <h2>Roadmap from idea to launch</h2>
+        <p>
+          A clear plan from ideation and research to AI integration and live deployment.
+        </p>
+      </div>
+
+      <div class="roadmap-timeline">
+        <div class="roadmap-item">
+          <div class="roadmap-badge">Q1</div>
+          <h3>Planning & Design</h3>
+          <p>Gather requirements, finalize features, and draft UI/UX layouts.</p>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-badge">Q2</div>
+          <h3>Frontend Setup</h3>
+          <p>Build main interface, dashboards, and quiz creation screens.</p>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-badge">Q3</div>
+          <h3>Backend Setup</h3>
+          <p>Develop core APIs, database schemas, and user management services.</p>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-badge">Q4</div>
+          <h3>Realtime Quiz System</h3>
+          <p>Implement live sessions, WebSockets, and dynamic leaderboards.</p>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-badge">Q5</div>
+          <h3>AI & Analytics</h3>
+          <p>Add AI quiz generation, performance insights, and personalization.</p>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-badge">Q6</div>
+          <h3>Testing & Launch</h3>
+          <p>Fix bugs, optimize performance, and deploy the full platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TEAM ================= -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <h2>Team Samarpan</h2>
+        <p>
+          A cross-functional team blending development, AI, design, and data to
+          bring Samarpan to life.
+        </p>
+      </div>
+
+      <div class="grid team-grid">
+        <div class="card team-card">
+          <div class="avatar">MP</div>
+          <h3>Mehak Pal</h3>
+          <p class="role">Team Lead & Full Stack Developer</p>
+          <ul>
+            <li>Leads project workflow, deadlines & GitHub repo.</li>
+            <li>Handles frontend–backend integration and deployment.</li>
+            <li>Ensures end-to-end platform functionality.</li>
+          </ul>
+        </div>
+
+        <div class="card team-card">
+          <div class="avatar">JS</div>
+          <h3>Janvi Sahu</h3>
+          <p class="role">AI / ML Expert</p>
+          <ul>
+            <li>Builds AI quiz generation from text, PDFs & topics.</li>
+            <li>Implements adaptive learning & difficulty progression.</li>
+            <li>Works on performance analytics & personalization.</li>
+          </ul>
+        </div>
+
+        <div class="card team-card">
+          <div class="avatar">SK</div>
+          <h3>Sumit Kumar</h3>
+          <p class="role">UI/UX & Frontend Designer</p>
+          <ul>
+            <li>Designs modern, responsive UI in React.</li>
+            <li>Focuses on smooth animations & branding.</li>
+            <li>Adds interactivity to quizzes & dashboards.</li>
+          </ul>
+        </div>
+
+        <div class="card team-card">
+          <div class="avatar">AM</div>
+          <h3>Maurya Aman Satyendra</h3>
+          <p class="role">Data & Content Manager</p>
+          <ul>
+            <li>Curates quiz questions and manages datasets.</li>
+            <li>Tests platform for usability & performance.</li>
+            <li>Assists with rating system & tournaments.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently asked questions</h2>
+        <p>Need more clarity? Here are some quick answers.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can Samarpan generate quizzes from our notes or PDFs?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Upload PDFs or paste text, and the AI service will convert them into
+            structured MCQs with varying difficulty levels.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does Samarpan support multiplayer quiz battles?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Samarpan supports solo, duo, and team-based modes like 2v2 and 4v4, with
+            live scores, rankings, and reactions to keep the session exciting.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How can institutes use the analytics?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Institutes can monitor accuracy, speed, participation, and topic-wise
+            performance to identify gaps, design remediation, and reward top performers.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section alt-section" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <h2>Let’s collaborate on smart education</h2>
+        <p>
+          Whether you’re a teacher, institute, or learner community,
+          we’d love to explore how Samarpan can power your quizzes and competitions.
+        </p>
+        <ul class="contact-highlights">
+          <li>🧠 Custom AI quiz setup for your syllabus</li>
+          <li>🏫 Institute-level tournaments and dashboards</li>
+          <li>🤝 Flexible integration with your existing LMS</li>
+        </ul>
+      </div>
+
+      <form class="contact-form">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Aman Maurya" />
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input type="email" id="email" placeholder="you@institute.com" />
+        </div>
+        <div class="field">
+          <label for="org">Institute / Organization</label>
+          <input type="text" id="org" placeholder="Your college, school, or org" />
+        </div>
+        <div class="field">
+          <label for="message">How do you plan to use Samarpan?</label>
+          <textarea id="message" rows="4" placeholder="Tell us about your use-case, exams, or events..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">
+          Submit request
+        </button>
+        <p class="form-note">
+          This is a demo site – form submission is for prototype purposes only.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="logo">
+          <span class="logo-mark">S</span>
+          <span class="logo-text">Samarpan</span>
+        </div>
+        <p class="footer-text">
+          AI-powered quiz portal for smart, multiplayer and analytics-driven learning.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Platform</h4>
+          <a href="#features">Features</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#roadmap">Roadmap</a>
+        </div>
+        <div>
+          <h4>Project</h4>
+          <a href="#problem">Problem</a>
+          <a href="#solution">Solution</a>
+          <a href="#team">Team</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="#contact">Contact</a>
+          <a href="#faq">FAQ</a>
+          <a href="#hero">Back to top</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Samarpan Labs. All rights reserved.</span>
+        <span class="footer-love">• made with ❤️ for meri pyaari biwi</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

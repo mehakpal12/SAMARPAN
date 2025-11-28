@@ -298,13 +298,85 @@ body {
 }
 
 /* Views */
+
+/* ========= TAB SWITCH ANIMATIONS (GAMING VIBE) ========= */
+
+/* base state for all views (jab active nahi ho) */
 .view {
   display: none;
+  opacity: 0;
+  transform: scale(0.98) translateY(12px);
 }
 
+/* jo view active ho, wo visible + normal ho */
 .view-active {
   display: block;
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }
+
+/* animate-in class (added from JS on every switch) */
+.view-anim-in {
+  animation: tab-enter 0.45s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* keyframes: slight zoom + slide + glow */
+@keyframes tab-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(18px) rotateX(3deg);
+    filter: drop-shadow(0 0 0 rgba(129, 140, 248, 0.0));
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02) translateY(0) rotateX(0deg);
+    filter: drop-shadow(0 0 28px rgba(129, 140, 248, 0.7));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.2));
+  }
+}
+
+/* neon flash line */
+.switch-flash {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  height: 3px;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(90deg, #22c55e, #6366f1, #f97316, #22c55e);
+  background-size: 200% 100%;
+}
+
+.switch-flash.flash-go {
+  animation: flash-swipe 0.45s ease-out forwards;
+}
+
+@keyframes flash-swipe {
+  0% {
+    opacity: 0;
+    background-position: 0% 0%;
+    transform: translateX(-10%);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-position: 100% 0%;
+    transform: translateX(5%);
+  }
+}
+
+/* main ko relative rakho */
+.main {
+  position: relative;
+}
+
 
 /* View header */
 .view-header h2 {
